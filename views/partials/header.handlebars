@@ -1,0 +1,37 @@
+<header>
+  <div class="header-container">
+    <nav class="navbar" role="navigation" aria-label="main navigation">
+      <div class="navbar-brand">
+        <a class="navbar-item" href="/">
+          <span class="title is-4 NBTitle">Tech Blog</span>
+        </a>
+        <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navMenu">
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+
+        </a>
+      </div>
+      <div id="navMenu" class="navbar-menu">
+        <div class="navbar-start">
+          <!-- The navbar-start section remains empty -->
+        </div>
+        <div class="navbar-end">
+          <a class="navbar-item" id="navbar-links" href="/">Home</a>
+          <a class="navbar-item" id="navbar-links" href="/dashboard">Dashboard</a>
+          {{#if logged_in}}
+          <form>
+            <a class="navbar-item logout-button" id="navbar-links" href="/">Logout</a>
+          </form>
+          {{else}}
+          <a class="navbar-item" id="navbar-links" href="/login">Login</a>
+          {{/if}}
+        </div>
+      </div>
+    </nav>
+    <img class="header-background-image" src="/assets/images/lambo.png" alt="Background Image">
+  </div>
+  <div class="banner">
+    <p id="banner-text"></p>
+  </div>
+</header>

@@ -1,0 +1,130 @@
+:root {
+    --mainTextColor: #d7edff;
+    --scdTextColor: #000000;
+    --Transparany: #37882200;
+}
+
+
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 20;
+    background: transparent;
+}
+
+/* .navbar-menu{
+    position: ;
+} */
+.navbar-item {
+    font-size: 1.25rem;
+    color: var(--mainTextColor);
+    display: flex;
+    justify-content: end;
+}
+
+#navbar-links:hover {
+    background-color: var(--Transparany) !important;
+    color: var(--scdTextColor) !important;
+
+}
+
+.navbar-item.title {
+    margin-right: .5rem;
+}
+
+.navbar-burger span {
+    height: 2px;
+    color: var(--mainTextColor);
+}
+
+.navbar-burger {
+    margin-left: auto;
+}
+
+.header-container {
+    position: relative;
+    height: 20vh;
+}
+
+.header-background-image {
+    position: fixed;
+    top: 0%;
+    height: 20vh;
+    width: 100%;
+    z-index: 19;
+    object-fit: cover;
+    object-position: 100% 75%;
+}
+
+.NBTitle {
+    color: var(--mainTextColor);
+}
+
+#title-img {
+    max-width: 100%;
+
+}
+
+
+.banner {
+    height: 7vh;
+    overflow: hidden;
+    background: linear-gradient(to right, #ff758c 0%, #ff7eb3 100%);
+    position: relative;
+    color: white; 
+}
+
+
+#banner-text {
+    position: absolute;
+    white-space: nowrap;
+    animation: scroll 20s linear infinite;
+}
+
+@keyframes scroll {
+    0% {
+        transform: translateX(100%);
+    }
+
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+
+@media screen and (max-width: 1023px) {
+    .navbar {
+        position: absolute;
+        /* z-index: 10; */
+    }
+
+    .header-background-image {
+        position: absolute;
+        display: block;
+    }
+
+    .navbar-menu.is-active {
+        position: absolute;
+        display: contents;
+        justify-items: end;
+        background-color: #262626ee;
+        width: 15vw;
+    }
+}
+
+@media screen and (max-width: 1023px) and (min-width: 770px) {}
+
+@media screen and (max-width: 769.99px) {}
+
+
+/* FOOTER */
+
+.footer {
+    background-color: #f5f5f5;
+    padding: 2rem 0;
+}
+
+.content.has-text-centered {
+    margin: auto;
+}
